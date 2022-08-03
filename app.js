@@ -24,7 +24,6 @@ function getforceList() {
 
 }
 
-
 function getOfficerList() {
     let text = "";
     let value = document.getElementById("forceList").value;
