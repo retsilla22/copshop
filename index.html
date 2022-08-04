@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,64 +9,70 @@
 
 <body style="font-family:Verdana;">
 
-
-
-    <h1>Cop Shops Near You!</h1>
-    <h3></h3>
+    <div style="background-color:#f1f1f1;padding:15px;">
+        <h1>Cop Shops Near You!</h1>
+        <h3></h3>
     </div>
 
     <div style="overflow:auto">
         <div class="menu">
             <label for="forces">Choose a Force:</label>
-
-            body {
-            background-repeat: repeat-y;
-            background-image: url("img_flwr.gif");
-            }
-            <select name="forceList" id="forceList">
-
-
+            <select class="select" name="forceList" id="forceList">
+                <!-- This is where the options of forces will be rendered.  -->
             </select>
+
         </div>
 
         <div class="main">
-            <h2>Senior Officer</h2>
-            <div class="officer">
-
-
-
-            </div>
             <div class="forceinfo">
-                <h2>Title</h2>
-                <p>Description</p>
-                <h3>Website</h3>
-                <h3>Contact url</h3>
+                <h2 id="specificForceName"></h2>
+                <p id="specificForceDes"></p>
+                <h3>Contacts</h3>
+                <h5 id="specificForceTel"></h5>
+                <div class="social-div" id="social-div">
+                    <!-- blanked out, as it has been amended and utilised in JS -->
+                    <!-- <ul class="social" id="social">
+                        <li><a href="###"><img src="/images/www.png" alt="website"
+                                    style="width:30px;height:30px;"><br>Website</a></li>
+                        <li><a href="###"><img src="/images/facebook.png" alt="facebook"
+                                    style="width:30px;height:30px;"><br>Facebook</a></li>
+                        <li><a href="###"><img src="/images/youtube.png" alt="youtube"
+                                    style="width:30px;height:30px;"><br>YouTube</a></li>
+                        <li><a href="###"><img src="/images/twitter.png" alt="twitter"
+                                    style="width:30px;height:30px;"><br>Twitter</a></li>
+                    </ul> -->
+                </div>
+            </div>
+
+            <h2>Senior Officer</h2>
+            <div class="officer" id="officer">
+
             </div>
         </div>
 
-        <div class="events">
-            <h2>Title</h2>
-            <h3>Start Date</h3>
-            <p>Description</p>
-            <h3>Address</h3>
+        <div class="right">
+            <div class="events">
+                <h3>Neighbourhoods</h3>
+
+                <label for="forces">Choose a Neighbourhood:</label>
+                <select class="select" name="neighbourhoodsList" id="neighbourhoodsList">
+                    <!-- This is where the options of forces will be rendered.  -->
+                </select>
+                <h3>Neighbourhood Events</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Meeting Type</h6>
+                    <p class="card-description">Description</p>
+                    <p class="card-address">address</p>
+                    <a class="card-date">Date</a>
+                    <a class="card-time">Time</a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;">
     </div>
-    <div class="right">
-        <h2>What?</h2>
-        <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
-        <h2>Where?</h2>
-        <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
-        <h2>Price?</h2>
-        <p>The Walk is free!</p>
-    </div>
-    </div>
-
-
-    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page
-        is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the
-        content respond to the resizing.</div>
 
 </body>
 
