@@ -198,9 +198,11 @@ function getEvents() {
         .then(function (res) {
             for (const key in res) {
                 const event = res[key];
+                const dateNtimeArray = event.start_date.split('T');
                 text += '<div class="card-body">' +
-                    '<h5 class="card-title">Title: ' + event.title + '</h5>' +
-                    '<a class="card-date&time">Date: ' + event.start_date + '</a>' +
+                    '<h5 class="card-title"> ' + event.title + '</h5>' +
+                    '<a class="card-date&time">Date: ' + dateNtimeArray[0] + ",     Time: "
+                    + dateNtimeArray[1] + '</a>' +
                     '<p class="card-description">Description: ' + event.description + '</p>' +
                     '<p class="card-address">Address: ' + event.address + '</p>';
                 text += '</div>';
