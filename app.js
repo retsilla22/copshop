@@ -1,6 +1,7 @@
 addEventListener("load", getforceList);
 addEventListener("load", specificForce);
 addEventListener("load", getNeighList);
+addEventListener("load", getEvents);
 const element = document.getElementById("forceList");
 element.addEventListener("click", getOfficerList);
 element.addEventListener("click", specificForce);
@@ -189,3 +190,25 @@ function getNeighList() {
         })
 }
 
+function getEvents() {
+    let text = '';
+    let url = 'https://data.police.uk/api/leicestershire/NC04/events';
+    fetch(url)
+        .then(res => res.json())
+        .then(function (res) {
+            for (const key in res) {
+                const event = res[key];
+                text += '<div class="card-body">' +
+                    '<h5 class="card-title">Title: ' + event.title + '</h5>' +
+                    '<a class="card-date&time">Date: ' + event.start_date + '</a>' +
+                    '<p class="card-description">Description: ' + event.description + '</p>' +
+                    '<p class="card-address">Address: ' + event.address + '</p>';
+                text += '</div>';
+                document.getElementById("events").innerHTML = text;
+            }
+
+        }).catch((error) => {
+            console.log("Error")
+        })
+
+}
